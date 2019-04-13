@@ -56,7 +56,7 @@ export class StatisticGadgetComponent extends GadgetBase {
     public updateData(data: any[]) {
 
         this._statisticService.get(this.resource).subscribe(data => {
-                this.data = data;
+                //this.data = data;
             },
             error => this.handleError(error));
     }

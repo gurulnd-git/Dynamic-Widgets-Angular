@@ -45,10 +45,6 @@ export class GadgetFactory {
                 return PropertyListGadgetComponent;
             case 'DiskGadgetComponent':
                 return DiskGadgetComponent;
-            case 'ServiceListGadgetComponent':
-                return ServiceListGadgetComponent;
-            case 'StatisticGadgetComponent':
-                return StatisticGadgetComponent;
             case 'TrendGadgetComponent':
                 return TrendGadgetComponent;
             case 'NewsGadgetComponent':
@@ -73,9 +69,7 @@ export class GadgetFactory {
                 return BarChartGadgetComponent;
             case 'PieChartGadgetComponent': // todo gadget
                 return PieChartGadgetComponent;
-            default:
-                return null;// todo add default gadget that would be displayed. Useful for troubleshooting new gadget dev
-
+            
         }
     }
 }

@@ -138,28 +138,16 @@ export class MenuComponent implements OnInit {
         this.selectedBoard = selectedBoard;
     }
 
-    toggleLayoutSideBar() {
-        this.layoutSideBar = jQuery(this.layoutSideBarRef.nativeElement);
-        this.layoutSideBar.sidebar('setting', 'transition', 'overlay');
-        this.layoutSideBar.sidebar('toggle');
-        this.layoutId = this._configurationService.currentModel.id;
-    }
+    
 
     toggleNotificationSideBar() {
         this.notificationSideBar = jQuery(this.notificationSideBarRef.nativeElement);
         this.notificationSideBar.sidebar('setting', 'transition', 'overlay');
         this.notificationSideBar.sidebar('toggle');
     }
-    toggleAboutSideBar() {
-        this.aboutSideBar = jQuery(this.aboutSideBarRef.nativeElement);
-        this.aboutSideBar.sidebar('setting', 'transition', 'overlay');
-        this.aboutSideBar.sidebar('toggle');
-    }
+    
 
 
-    public showDocumentation() {
-
-        window.location.href = 'http://' + window.location.host + '/assets/documentation/index.html';
-    }
+   
 
 }
