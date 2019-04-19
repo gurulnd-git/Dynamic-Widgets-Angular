@@ -17,13 +17,7 @@
          attr.data-tab="{{tab.groupId}}" [@contentSwitch]="tab.displayName == currentTab ? 'active':'inactive'">
 
 
-        <div *ngIf="tab.groupId == 'boards'">
-
-            <app-boards-config-tab  (dashboardCreateEvent)="createBoard($event)"
-                                   (dashboardEditEvent)="editBoard($event)"
-                                   (dashboardDeleteEvent)="deleteBoard($event)"
-                                   [dashboardList]="dashboardList"></app-boards-config-tab>
-        </div>
+        
 
         <div *ngIf="tab.groupId == 'endpoint'">
 
@@ -31,17 +25,6 @@
 
         </div>
 
-        <div *ngIf="tab.groupId == 'ai'">
-
-            <app-ai-config-tab></app-ai-config-tab>
-
-        </div>
-
-        <div *ngIf="tab.groupId == 'options'">
-
-            <app-options-config-tab></app-options-config-tab>
-
-        </div>
     </div>
 
 

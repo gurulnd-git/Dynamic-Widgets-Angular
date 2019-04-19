@@ -7,7 +7,7 @@ import {GadgetInstanceService} from '../../grid/grid.service';
 import {AfterViewInit, ChangeDetectorRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {DynamicFormComponent} from '../../dynamic-form/dynamic-form.component';
 import {OptionsService} from "../../configuration/tab-options/service";
-
+import { IGadget } from './IGadget';
 /**
  * Created by jayhamilton on 6/22/17.
  */

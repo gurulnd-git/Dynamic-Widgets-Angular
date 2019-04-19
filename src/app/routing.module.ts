@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {AppComponent} from './app.component';
+import {DynamicWidgetComponent} from './app.component';
 import {BoardComponent} from './board/board.component';
-import {DetailComponent} from './detail/detail.component';
 
 export const routes: Routes = [
     {
@@ -12,19 +11,12 @@ export const routes: Routes = [
     },
     {
         path: '',
-        component: AppComponent
+        component: DynamicWidgetComponent
     },
     {
         path: 'main-board',
         component: BoardComponent
-    },
-    {
-        path: 'detail',
-        component: DetailComponent,
-        runGuardsAndResolvers: 'always'
-    },
-
-
+    }
 ];
 
 @NgModule({

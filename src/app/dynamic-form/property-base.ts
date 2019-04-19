@@ -9,7 +9,7 @@ export class PropertyBase<T> {
     order: number;
     controlType: string;
     options:any;
-
+    type: any;
     constructor(props: {
         value?: T,
         key?: string,
@@ -17,7 +17,8 @@ export class PropertyBase<T> {
         required?: boolean,
         order?: number,
         controlType?: string,
-        options?:any
+        options?:any,
+        type?: any
     } = {},
    ) {
 

@@ -5,7 +5,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {EMPTY, Observable} from 'rxjs';
 import {defaultBoard} from './configuration-sample-default-board';
-import {sampleBoardCollectionProd} from './configuration-sample-boards-prod.model';
 import {sampleBoardCollection} from './configuration-sample-boards.model';
 import {environment} from '../../environments/environment';
 
@@ -31,7 +30,6 @@ export class ConfigurationService {
 
         Object.assign(this, {defaultBoard});
         Object.assign(this, {sampleBoardCollection});
-        Object.assign(this, {sampleBoardCollectionProd});
         this.env = environment;
         this.seedLocalStorageWithSampleBoardCollection();
     }
@@ -39,14 +37,7 @@ export class ConfigurationService {
     private seedLocalStorageWithSampleBoardCollection() {
 
         if (localStorage.getItem('board') === null) {
-
-
-            if (this.env.production == true) {
-
-                localStorage.setItem('board', JSON.stringify(this.sampleBoardCollectionProd));
-            } else {
-                localStorage.setItem('board', JSON.stringify(this.sampleBoardCollection));
-            }
+            localStorage.setItem('board', JSON.stringify(this.sampleBoardCollection));
         }
     }
 
